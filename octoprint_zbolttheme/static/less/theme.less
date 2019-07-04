@@ -15,6 +15,7 @@
 body {
     background-color: @mainBg;
     font-weight: 400;
+    line-height: 21px;
 }
 
 a {
@@ -103,7 +104,8 @@ a {
     background-color: @mainButtonBg;
 }
 
-.container {
+.octoprint-container {
+    margin-top: -260px;
     width:100%;
     .span4 {
         width: 25%;
@@ -117,25 +119,66 @@ a {
     }
 }
 
+
 #navbar .navbar-inner {
-    background-color: rgba(26, 26, 26, 0.92);
+    background-color: #424448;
     border: none;
     background-image: none;
+    padding-bottom: 260px;
+    text-shadow: none;
 
+    &.red {
+        background: linear-gradient(to right, #A445B2 0%, #D41872 52%, #FF0066 100%);
+        text-shadow: none;
+    }
+
+    &.yellow {
+        background: linear-gradient(to right, rgb(254, 147, 101) 0%, rgb(254, 183, 152) 100%);
+        text-shadow: none;
+    }
+
+    &.orange {
+        background: linear-gradient(to right, #f77062 0%, #fe5196 100%);
+        text-shadow: none;
+    }
+
+    &.green {
+        background: linear-gradient(to right, #01a9ac 0%, #01dbdf 100%);
+    }
+
+    &.blue {
+        background: #04a9f5;
+    }
+
+    &.violet {
+        background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+    }
+
+    &.black {
+        background: #424448;
+    }
+
+    &.white {
+        background: #fff;
+    }
+    
     .nav {
         >li.dropdown.open>.dropdown-toggle, >li.dropdown.active>.dropdown-toggle, >li.dropdown.open.active>.dropdown-toggle {
             background: darken(@widgetsBg, 1);
             border-bottom: 1px solid @mainFontColor;
             color: #fff;
-    }
-    > li > a:hover {
-        color: #fff;
-        background: @mainButtonBg;
-    }
+        }
+        
+        > li > a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2) !important;
+        }
+
+
     }
 
     & .brand, .nav > li > a {
-        text-shadow: none;
+        text-shadow: none !important;
         color: #fff;
         & .caret {
             border-top-color: #fff;
@@ -143,7 +186,7 @@ a {
         }
     }
     .brand span {
-        background-image: url(../img/z-bolt-logo.svg);
+        background-image: url(../img/z-bolt-logo.svg) !important;
     }
 }
 
@@ -181,12 +224,19 @@ a {
     border:none;
 }
 
+
+
+.accordion {
+    margin-left: 0px;
+}
+
 .accordion-group {
     &:extend(.shadow-m);
     background-color: @widgetsBg;
     border: none;
     border-radius: 0px;
     margin-bottom: 5px;
+    border-radius: 0px 10px 10px 0px;
 
     hr {
         border-bottom: none;
@@ -196,7 +246,7 @@ a {
 
 .accordion-inner {
     border-top: none;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 0px;
 }
 
@@ -239,9 +289,7 @@ a {
     
 }
 
-.octoprint-container {
-    margin-top: 0px;
-}
+
 
 #state_wrapper {
     // background-color: #04a9f5;
@@ -277,7 +325,8 @@ a {
 .tabbable {
     background: @widgetsBg;
     &:extend(.shadow-m);
-    padding-top: 10px;
+    // padding-top: 10px;
+    border-radius: 5px;
 }
 
 .table-hover tbody tr:hover td,

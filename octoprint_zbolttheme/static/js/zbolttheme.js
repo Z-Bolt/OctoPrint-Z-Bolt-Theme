@@ -10,11 +10,11 @@ $(function() {
         console.log('test');
     }
 
-    OCTOPRINT_VIEWMODELS.push({
-        construct: ZBoltViewModel,
-        // dependencies: ["AppearanceViewModel"],
-        elements: ["head"]
-    });
+    // OCTOPRINT_VIEWMODELS.push({
+    //     construct: ZBoltViewModel,
+    //     // dependencies: ["AppearanceViewModel"],
+    //     // elements: ["head"]
+    // });
 
 
 
