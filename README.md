@@ -1,7 +1,6 @@
 # OctoPrint-Z-Bolt-Theme
 
-**TODO:** Describe what your plugin does.
-This plugin changes the way octoprint looks on a browser.
+<img width="480" src="https://user-images.githubusercontent.com/390214/60665538-6551e300-9e6d-11e9-9564-3e82301259ab.png" />
 
 ## Setup
 
