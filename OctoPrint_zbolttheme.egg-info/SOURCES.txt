@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+OctoPrint_zbolttheme.egg-info/PKG-INFO
+OctoPrint_zbolttheme.egg-info/SOURCES.txt
+OctoPrint_zbolttheme.egg-info/dependency_links.txt
+OctoPrint_zbolttheme.egg-info/entry_points.txt
+OctoPrint_zbolttheme.egg-info/not-zip-safe
+OctoPrint_zbolttheme.egg-info/requires.txt
+OctoPrint_zbolttheme.egg-info/top_level.txt
+octoprint_zbolttheme/__init__.py
