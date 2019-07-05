@@ -63,7 +63,6 @@ a {
     &:extend(.shadow-l);
     
     background-image: none;
-    // box-shadow: none;
     font-weight: 400;
     border: none;
     background-color: @greyButtonBg;
@@ -76,6 +75,10 @@ a {
 
     &:active {
         box-shadow: none;
+    }
+
+    &.active{
+        color: #fff;
     }
 }
 
@@ -224,8 +227,6 @@ a {
     border:none;
 }
 
-
-
 .accordion {
     margin-left: 0px;
 }
@@ -289,12 +290,14 @@ a {
     
 }
 
-
+@keyframes printing-animation{
+    0%{background-position:0% 10%}50%{background-position:0% 50%}100%{background-position:0% 80%}
+}
 
 #state_wrapper {
-    // background-color: #04a9f5;
     background: linear-gradient(-135deg, #1de9b6 0, #0247af 100%);
     color: #fff;
+    
     .accordion-toggle {
         color: #fff;
     }
@@ -305,6 +308,17 @@ a {
 
     .accordion-toggle:after {
         background: #fff;
+    }
+
+    &.printing {
+        background: linear-gradient(-135deg, #1de9b6 0, #0247af 100%);
+        background-position: 0% 100%;
+        background-size: 100% 400%;
+        animation: 1s printing-animation linear infinite alternate;
+    }
+
+    .print-control {
+        padding-bottom: 10px;
     }
 }
 
@@ -325,7 +339,6 @@ a {
 .tabbable {
     background: @widgetsBg;
     &:extend(.shadow-m);
-    // padding-top: 10px;
     border-radius: 5px;
 }
 
